@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>$ piuvas_</title>
+<link rel="stylesheet" href="intro.css">
+
+<meta name="theme-color" content="#c4a7e7" />
+<meta property="og:title" content="piuvas" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ current_url }}" />
+<meta property="og:description" content="seja bem-vindo ao meu site :)" />
+{% endblock head %}
+
+{% block content %}
+<header>
+    user@piuvas.net ~
+    <a class="license" href="https://creativecommons.org/licenses/by/4.0/">cc-by-4.0</a>
+</header>
+<br>
+<div class="grid">
+    <img src="img/capivara.gif" height=128px alt="imagem de uma capivara com dithering"/>
+    <section class="social">
+        <div class="svg"><img src="img/discord.svg" alt="discord"/>
+        piuvas
+        </div>
+
+        <div class="svg"><img src="img/mail-plus.svg" alt="e-mail"/>
+        mail<span>@</span>piuvas.net
+        </div>
+
+        <div class="svg"><img src="img/activitypub.svg" alt="mastodon"/>
+        <a rel="me" href="https://capivarinha.club/@piuvas">
+        piuvas@capivarinha.club
+        </a>
+        </div>
+
+        <div class="svg"><img src="img/matrix.svg" alt="matrix"/>
+        <a href="https://matrix.to/#/@piuvas:whatever.social">
+        piuvas:whatever.social
+        </a>
+        </div>
+    </section>
+    <section class="intro">
+        seja bem vindo : ) meu nome é PIUVAS e eu gosto de escrever software em RUST e NIM. meu BLOG é sobre TECNOLOGIA e assuntos aleatórios. eu amo as capivaras <3.  
+    </section>
+</div>
+
+<main>
+    $ cd blog/
+    <a href="rss.xml"><img class="rss" src="img/rss.svg" alt="Feed RSS" /></a>
+    <h1>
+        {{ section.title }}<span class="cursor">_</span>
+    </h1>
+    <br>
+    
+    {% for page in section.pages %}
+    . <a href="{{ page.permalink | safe }}">{{ page.slug }}.md</a> - {{ page.title }}
+    <div class="date">└── de {{ page.date }} • {{ page.reading_time }} min{% if page.updated %} (atualizado em {{page.updated}}){% endif %}</div>
+    <br>
+    {% endfor %}
+    
+</main>
+<hr>
+<footer>
+    <p class="kbclub"><a href="https://www.512kb.club/">512kb club</a> - green team</p>
+    <p><a href="https://fediring.net/previous?host=piuvas.net"><</a> <a href="https://fediring.net">fediring</a> <a href="https://fediring.net/next?host=piuvas.net">></a></p>
+    <a href="https://git.envs.net/piuvas/piuvas.net" class="svg">
+        <img src="img/code-2.svg"/>
+    </a>
+<footer>
+{% endblock content %}

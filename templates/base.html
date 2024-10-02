@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% block rss %}
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+    {% endblock %}
+    {% block head %} {% endblock %}
+    <meta property="og:site_name" content="$ piuvas_" />
+    <meta property="og:image" content="https://piuvas.net/img/capivara.gif" />
+    <meta name="fediverse:creator" content="@piuvas@capivarinha.club" />
+</head>
+
+<body>
+    {% block content %} {% endblock %}
+</body>
+</html>

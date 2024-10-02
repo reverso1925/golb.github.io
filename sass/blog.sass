@@ -1,0 +1,49 @@
+@import 'common'
+@import url('https://api.fonts.coollabs.io/css2?family=Atkinson+Hyperlegible&display=swap')
+.subtitle
+    text-align: center
+    color: $subtle
+article
+    font-family: 'Atkinson Hyperlegible', sans-serif
+    h1, h2, h3, h4, h5, h6
+        text-align: right
+        color: $rose
+    p
+        text-align: justify
+    a
+        color: $foam
+        text-decoration: underline
+    blockquote
+        background-color: $surface
+        padding: .25em 1em
+        border-radius: 5px
+        border-left: .25em solid $iris
+    pre
+        border-radius: 5px
+        padding: .5em
+        display: block
+        overflow: scroll
+    code
+        background-color: $surface
+        border-radius: 3px
+    li::marker
+        color: $rose
+    table
+        display: block
+        max-width: fit-content
+        overflow: scroll
+        margin: auto
+    tr:nth-child(odd)
+        background: $surface
+    tr:nth-child(even)
+        background: $overlay
+    th, td
+        padding: .5em
+    img, source
+        max-width: 100%
+        height: auto
+        max-height: 30em
+        display: block
+        margin: auto
+    .zola-anchor
+        text-decoration: none

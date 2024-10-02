@@ -1,0 +1,11 @@
+User-agent: *
+Disallow:
+Allow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+Sitemap: {{ get_url(path="sitemap.xml") }}

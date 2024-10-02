@@ -1,0 +1,47 @@
+@import 'common'
+@keyframes cursor
+    from
+        visibility: visible
+    to
+        visibility: hidden
+.cursor
+    animation: cursor 1s steps(2,start) infinite
+main
+    padding: 1em
+    margin: 0.25em
+footer
+    text-align: center
+img
+    image-rendering: pixelated
+.date
+    color: $muted
+.grid
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    > *
+        margin: 0.25em
+    > section
+        border-bottom: 1px solid $low
+.intro
+    flex: 2 1 17em
+    min-width: 16em
+    padding: 0.5em
+    height: calc(128px - 1em)
+.social
+    flex: 1 0 15em
+    display: flex
+    flex-flow: column wrap
+    justify-content: space-evenly
+    padding: 1em
+    height: calc(128px - 2em)
+.svg
+    img
+        vertical-align: middle
+        width: 1em
+.kbclub
+    color: $foam
+    a
+        color: $foam
+.error
+    color: $love
